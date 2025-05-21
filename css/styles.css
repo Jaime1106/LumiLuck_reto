@@ -1,0 +1,619 @@
+/* css/style.css */
+
+/* Reseteo básico (puedes usar reset.css o normalize.css para algo más completo) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Elige una fuente más adecuada luego */
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px; /* O el ancho que prefieras */
+    margin: 0 auto;
+    padding: 0 15px; /* Espaciado lateral */
+}
+
+/* Estilos del Header (ejemplo muy básico) */
+header {
+    background-color: #f8f8f8;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-height: 50px; /* Ajusta según tu logo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #007bff; /* Un color de acento */
+}
+
+.header-icons img {
+    height: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    position: relative;
+    top: -10px;
+    left: -5px;
+}
+
+
+/* Botones (ejemplo) */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color primario */
+    color: white;
+    border: 1px solid #007bff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Color secundario */
+    color: white;
+    border: 1px solid #6c757d;
+}
+.btn-secondary:hover {
+    background-color: #545b62;
+}
+
+
+/* Hero Section (ejemplo básico) */
+.hero-section {
+    background-color: #e9ecef; /* Un color de fondo suave */
+    padding: 40px 0;
+    text-align: center;
+}
+.hero-section .hero-content {
+    margin-top: 20px;
+}
+.hero-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Featured Categories (ejemplo) */
+.featured-categories, .featured-products, .our-story {
+    padding: 40px 0;
+    text-align: center;
+}
+.featured-categories h2, .featured-products h2, .our-story h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+.categories-grid, .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+.category-item img, .product-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Para que las imágenes sean cuadradas, ajusta si necesario */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.category-item a, .product-card a {
+    text-decoration: none;
+    color: inherit;
+}
+.product-card {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+}
+.product-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+.product-card .price {
+    font-weight: bold;
+    color: #28a745; /* Un color para el precio */
+    margin-bottom: 10px;
+}
+
+
+/* Footer (ejemplo básico) */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0 20px;
+}
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap; /* Para que se adapte en móviles */
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.footer-column {
+    flex: 1;
+    min-width: 200px; /* Para que no se encojan demasiado */
+}
+.footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+.footer-column ul {
+    list-style: none;
+}
+.footer-column ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    line-height: 1.8;
+}
+.footer-column ul li a:hover {
+    color: white;
+}
+.footer-column p {
+    color: #adb5bd;
+    line-height: 1.8;
+}
+.social-icons img {
+    height: 24px;
+    margin-right: 10px;
+    opacity: 0.7;
+}
+.social-icons img:hover {
+    opacity: 1;
+}
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #495057;
+    font-size: 0.9rem;
+    color: #adb5bd;
+}
+
+/* css/style.css */
+
+/* ... tus estilos existentes ... */
+
+.catalogo-productos {
+    padding: 40px 0;
+}
+
+.catalogo-productos h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.filtros-ordenacion {
+    margin-bottom: 30px;
+    text-align: right; /* O center, o left, como prefieras */
+}
+
+.filtros-ordenacion select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+.product-card .brand {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+/* Para productos en oferta */
+.product-card.sale {
+    position: relative; /* Para posicionar el badge */
+    border: 2px solid #e44d26; /* Un borde para destacar */
+}
+
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e44d26; /* Color de oferta */
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.product-card .original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9em;
+    margin-right: 8px;
+}
+
+.paginacion {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.paginacion .page-link {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.paginacion .page-link:hover,
+.paginacion .page-link.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* css/style.css */
+
+/* ... (estilos existentes) ... */
+
+.hero-inspiracion {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+.hero-inspiracion::before { /* Overlay oscuro para legibilidad del texto */
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.hero-inspiracion .container {
+    position: relative; /* Para que el contenido esté sobre el overlay */
+    z-index: 1;
+}
+.hero-inspiracion h1 {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+.hero-inspiracion p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contenido-inspiracion {
+    padding: 40px 0;
+}
+.contenido-inspiracion h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+}
+
+.filtros-inspiracion {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.filtros-inspiracion .filtro-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    color: #555;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.filtros-inspiracion .filtro-btn:hover,
+.filtros-inspiracion .filtro-btn.active {
+    background-color: #007bff; /* O tu color primario */
+    color: white;
+    border-color: #007bff;
+}
+
+.grid-inspiracion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-inspiracion {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden; /* Para que la imagen no se salga si es más grande */
+    transition: transform 0.3s ease;
+}
+.tarjeta-inspiracion:hover {
+    transform: translateY(-5px);
+}
+.tarjeta-inspiracion a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.tarjeta-inspiracion img {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes de las tarjetas */
+    object-fit: cover;
+}
+.tarjeta-inspiracion-contenido {
+    padding: 20px;
+}
+.tarjeta-inspiracion .categoria-etiqueta {
+    display: inline-block;
+    background-color: #e9ecef;
+    color: #555;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.tarjeta-inspiracion h3 {
+    font-size: 1.3rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+.tarjeta-inspiracion p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+    /* Para limitar el texto y añadir puntos suspensivos (opcional, mejor con JS) */
+    /* display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden; */
+}
+.tarjeta-inspiracion .leer-mas {
+    font-weight: bold;
+    color: #007bff; /* O tu color primario */
+    font-size: 0.9rem;
+}
+/* css/style.css */
+
+/* ... (estilos existentes) ... */
+
+.hero-contacto {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 60px 20px; /* Un poco menos padding que el de inspiración */
+    position: relative;
+}
+.hero-contacto::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.4); /* Overlay un poco más claro o diferente */
+}
+.hero-contacto .container {
+    position: relative;
+    z-index: 1;
+}
+.hero-contacto h1 {
+    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+.hero-contacto p {
+    font-size: 1.1rem;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.contenido-contacto {
+    padding: 50px 0;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Dos columnas, formulario un poco más ancho */
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.info-contacto h2, .formulario-contacto-wrapper h2 {
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    color: #333;
+}
+.info-contacto p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.detalle-contacto {
+    display: flex;
+    align-items: flex-start; /* Alinear iconos arriba si el texto es largo */
+    margin-bottom: 20px;
+}
+.icono-contacto {
+    width: 28px; /* Tamaño de los iconos */
+    height: 28px;
+    margin-right: 15px;
+    flex-shrink: 0; /* Para que el icono no se encoja */
+}
+.detalle-contacto div strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #444;
+}
+.detalle-contacto div p {
+    margin-bottom: 3px;
+    color: #007bff; /* Color para enlaces */
+}
+.detalle-contacto div p a {
+    color: inherit; /* Hereda el color del párrafo */
+    text-decoration: none;
+}
+.detalle-contacto div p a:hover {
+    text-decoration: underline;
+}
+.detalle-contacto div small {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+
+.info-contacto h3 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.redes-sociales-contacto a {
+    display: inline-block;
+    margin-right: 15px;
+}
+.redes-sociales-contacto img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+.redes-sociales-contacto img:hover {
+    opacity: 1;
+}
+
+/* Formulario de Contacto */
+.formulario-contacto-wrapper {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #007bff; /* Color de borde al enfocar */
+    outline: none;
+}
+.form-group textarea {
+    resize: vertical; /* Permitir redimensionar verticalmente */
+}
+.form-group input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.form-group .label-checkbox {
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #666;
+    display: inline; /* Para que esté al lado del checkbox */
+}
+.form-group .label-checkbox a {
+    color: #007bff;
+    text-decoration: none;
+}
+.form-group .label-checkbox a:hover {
+    text-decoration: underline;
+}
+
+.btn-enviar {
+    width: 100%; /* Botón de ancho completo */
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+#form-status { /* Para mensajes de feedback del formulario */
+    margin-top: 15px;
+    font-weight: bold;
+}
+#form-status.success { color: green; }
+#form-status.error { color: red; }
+
+
+.mapa-ubicacion {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+.mapa-ubicacion h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+/* Media Query para layout de contacto en móviles */
+@media (max-width: 900px) { /* Ajusta el breakpoint si es necesario */
+    .contacto-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+    .info-contacto {
+        margin-bottom: 40px; /* Espacio entre info y formulario en móvil */
+    }
+}
+

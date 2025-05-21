@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumiLuck</title> 
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+<body>
+
+    <!-- ======================= HEADER ======================= -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-decohogar.png" alt="Logo DecoHogar">
+                <!-- O: <h1>DecoHogar</h1> -->
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/productos.html">Catálogo</a></li>
+                    <li><a href="pages/productos.html?categoria=sala">Sala</a></li>
+                    <li><a href="pages/productos.html?categoria=dormitorio">Dormitorio</a></li>
+                    <li><a href="pages/productos.html?categoria=cocina">Cocina</a></li>
+                    <li><a href="productos.html?categoria=banos">Baños</a></li>
+                    <li><a href="pages/productos.html?categoria=iluminacion">Iluminación</a></li>
+                    <li><a href="pages/inspiracion.html">Inspiración</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" aria-label="Buscar"><img src="images/icon-search.svg" alt="Buscar"></a>
+                <a href="#" aria-label="Mi Cuenta"><img src="images/icon-user.svg" alt="Mi Cuenta"></a>
+                <a href="pages/carrito.html" aria-label="Carrito de Compras">
+                    <img src="images/icon-cart.svg" alt="Carrito">
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================= MAIN CONTENT ======================= -->
+    <main>
+        <!-- Sección Hero / Banner Principal -->
+        <section class="hero-section">
+            <div class="container">
+                <img src="images/banner-hogar-moderno.jpg" alt="Decoración moderna para tu hogar" style="width:100%;">  
+                <div class="hero-content">
+                    <h2>Transforma Tu Espacio, Vive Mejor</h2> 
+                    <p>Encuentra la inspiración y los artículos perfectos para cada rincón de tu hogar.</p>
+                    <a href="pages/productos.html" class="btn btn-primary">Descubrir Colección</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Categorías Destacadas (Estilo Hogar) -->
+        <section class="featured-categories">
+            <div class="container">
+                <h2>Explora por Ambiente</h2> 
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <a href="pages/productos.html?categoria=sala">
+                            <img src="images/categoria-sala-estar.jpg" alt="Decoración para Sala de Estar">
+                            <h3>Sala de Estar</h3>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="pages/productos.html?categoria=dormitorio">
+                            <img src="images/categoria-dormitorio.jpg" alt="Textiles y Accesorios para Dormitorio">
+                            <h3>Dormitorio</h3>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="pages/productos.html?categoria=cocina-comedor">
+                            <img src="images/categoria-cocina.jpg" alt="Utensilios y Decoración para Cocina">
+                            <h3>Cocina y Comedor</h3>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="pages/productos.html?categoria=iluminacion">
+                            <img src="images/categoria-iluminacion.jpg" alt="Lámparas y Soluciones de Iluminación">
+                            <h3>Iluminación</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Novedades / Productos Destacados -->
+        <section class="featured-products">
+            <div class="container">
+                <h2>Novedades para tu Hogar</h2> 
+                <div class="products-grid">
+                    <article class="product-card">
+                        <a href="pages/producto-detalle.html?id=hogar101">
+                            <img src="images/producto-cojin-terciopelo.jpg" alt="Cojín de Terciopelo Azul">
+                            <h3>Cojín Terciopelo Azul Marino</h3>
+                            <p class="price">$19.99</p>
+                        </a>
+                        <button class="btn btn-secondary">Añadir al Carrito</button>
+                    </article>
+                    <article class="product-card">
+                        <a href="pages/producto-detalle.html?id=hogar102">
+                            <img src="images/producto-lampara-escritorio-minimalista.jpg" alt="Lámpara de Escritorio Minimalista">
+                            <h3>Lámpara Escritorio Minimalista</h3>
+                            <p class="price">$45.50</p>
+                        </a>
+                        <button class="btn btn-secondary">Añadir al Carrito</button>
+                    </article>
+                    <article class="product-card">
+                        <a href="pages/producto-detalle.html?id=hogar103">
+                            <img src="images/producto-juego-jarrones-ceramica.jpg" alt="Set de Jarrones de Cerámica">
+                            <h3>Set 3 Jarrones Cerámica</h3>
+                            <p class="price">$32.00</p>
+                        </a>
+                        <button class="btn btn-secondary">Añadir al Carrito</button>
+                    </article>
+                </div>
+                <a href="pages/productos.html" class="btn btn-primary-outline" style="margin-top: 30px;">Ver Todos los Productos</a>
+            </div>
+        </section>
+
+        <!-- (Opcional) Sección "Inspírate" o "Tendencias" -->
+        <section class="inspiration-tease">
+            <div class="container">
+                <h2>Ideas y Tendencias para Decorar</h2> 
+                <p>Descubre estilos, consejos y las últimas tendencias en nuestro blog de inspiración.</p>
+                <a href="pages/inspiracion.html" class="btn">Visitar Blog de Inspiración</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>DecoHogar</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="pages/productos.html">Catálogo</a></li>
+                        <li><a href="pages/inspiracion.html">Inspiración</a></li>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Atención al Cliente</h4>
+                    <p>Email: ayuda@decohogar.com</p> 
+                    <p>Teléfono: +123 987 6543</p>
+                    <p><a href="#">Preguntas Frecuentes</a></p>
+                </div>
+                <div class="footer-column">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>  
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© <span id="year"></span> DecoHogar. Todos los derechos reservados.</p> 
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+</body>
+</html>

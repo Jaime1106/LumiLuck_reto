@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - DecoHogar</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- ... Tu header (con rutas ../) ... -->
+        <!-- Asegúrate de que el icono del carrito en el nav apunte a "carrito.html" -->
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-decohogar.png" alt="Logo DecoHogar">
+            </a>
+            <nav class="nav-principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="productos.html">Catálogo General</a></li>
+                    <li><a href="inspiracion.html">Inspiración</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" aria-label="Buscar"><img src="../images/icon-search.svg" alt="Buscar"></a>
+                <a href="#" aria-label="Mi Cuenta"><img src="../images/icon-user.svg" alt="Mi Cuenta"></a>
+                <a href="carrito.html" class="active" aria-label="Carrito de Compras"> {/* Marcar como activo */}
+                    <img src="../images/icon-cart-active.svg" alt="Carrito"> {/* Icono activo opcional */}
+                    <span class="cart-count">3</span> {/* Ejemplo con 3 items */}
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-carrito">
+            <div class="container">
+                <h1>Tu Carrito de Compras</h1>
+
+                <div class="carrito-contenido">
+                    <!-- Sección de Items del Carrito -->
+                    <div class="items-carrito">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Producto</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th>Subtotal</th>
+                                    <th></th> <!-- Para el botón de eliminar -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Item 1 (Ejemplo Estático) -->
+                                <tr class="item-carrito-row" data-product-id="hogar101">
+                                    <td class="imagen-producto-carrito">
+                                        <a href="producto-detalle.html?id=hogar101">
+                                            <img src="../images/producto-cojin-terciopelo.jpg" alt="Cojín Terciopelo Azul">
+                                        </a>
+                                    </td>
+                                    <td class="info-producto-carrito">
+                                        <a href="producto-detalle.html?id=hogar101">Cojín Terciopelo Azul Marino</a>
+                                        <small>Color: Azul Marino</small> {/* Opciones si las hay */}
+                                        <small>SKU: CD-VEL-AZM-001</small>
+                                    </td>
+                                    <td class="precio-unitario-carrito" data-price="19.99">$19.99</td>
+                                    <td class="cantidad-carrito">
+                                        <input type="number" value="1" min="1" max="10" class="input-cantidad" aria-label="Cantidad">
+                                    </td>
+                                    <td class="subtotal-item-carrito">$19.99</td>
+                                    <td class="acciones-carrito">
+                                        <button class="btn-eliminar-item" aria-label="Eliminar item">×</button>
+                                    </td>
+                                </tr>
+
+                                <!-- Item 2 (Ejemplo Estático) -->
+                                <tr class="item-carrito-row" data-product-id="hogar102">
+                                    <td class="imagen-producto-carrito">
+                                        <a href="producto-detalle.html?id=hogar102">
+                                            <img src="../images/producto-lampara-escritorio-minimalista.jpg" alt="Lámpara Escritorio">
+                                        </a>
+                                    </td>
+                                    <td class="info-producto-carrito">
+                                        <a href="producto-detalle.html?id=hogar102">Lámpara Escritorio Minimalista</a>
+                                        <small>SKU: LUM-DESK-MIN-005</small>
+                                    </td>
+                                    <td class="precio-unitario-carrito" data-price="45.50">$45.50</td>
+                                    <td class="cantidad-carrito">
+                                        <input type="number" value="2" min="1" max="5" class="input-cantidad" aria-label="Cantidad">
+                                    </td>
+                                    <td class="subtotal-item-carrito">$91.00</td>
+                                    <td class="acciones-carrito">
+                                        <button class="btn-eliminar-item" aria-label="Eliminar item">×</button>
+                                    </td>
+                                </tr>
+                                
+                                <!-- Item 3 (Ejemplo Estático) -->
+                                <tr class="item-carrito-row" data-product-id="banos003">
+                                    <td class="imagen-producto-carrito">
+                                        <a href="producto-detalle.html?id=banos003">
+                                            <img src="../images/producto-set-toallas-algodon.jpg" alt="Set de Toallas">
+                                        </a>
+                                    </td>
+                                    <td class="info-producto-carrito">
+                                        <a href="producto-detalle.html?id=banos003">Set Toallas Algodón Egipcio (3 pzs)</a>
+                                        <small>SKU: TEX-TOW-EGY-010</small>
+                                    </td>
+                                    <td class="precio-unitario-carrito" data-price="39.90">$39.90</td>
+                                    <td class="cantidad-carrito">
+                                        <input type="number" value="1" min="1" max="3" class="input-cantidad" aria-label="Cantidad">
+                                    </td>
+                                    <td class="subtotal-item-carrito">$39.90</td>
+                                    <td class="acciones-carrito">
+                                        <button class="btn-eliminar-item" aria-label="Eliminar item">×</button>
+                                    </td>
+                                </tr>
+
+                                <!-- Mensaje si el carrito está vacío (esto se mostraría con JS) -->
+                                <!-- 
+                                <tr class="carrito-vacio-mensaje">
+                                    <td colspan="6">Tu carrito está vacío. <a href="productos.html">¡Empieza a comprar!</a></td>
+                                </tr>
+                                 -->
+                            </tbody>
+                        </table>
+                        <div class="acciones-globales-carrito">
+                            <a href="productos.html" class="btn btn-outline">Seguir Comprando</a>
+                            <button class="btn btn-secondary" id="actualizarCarritoBtn">Actualizar Carrito</button>
+                            <!-- <button class="btn btn-danger" id="vaciarCarritoBtn">Vaciar Carrito</button> -->
+                        </div>
+                    </div>
+
+                    <!-- Sección de Resumen del Pedido -->
+                    <div class="resumen-pedido">
+                        <h2>Resumen del Pedido</h2>
+                        <div class="detalle-resumen">
+                            <span>Subtotal:</span>
+                            <span id="resumenSubtotal">$150.89</span>
+                        </div>
+                        <div class="detalle-resumen">
+                            <span>Envío:</span>
+                            <span id="resumenEnvio">Calculado en el siguiente paso</span>
+                            <!-- O un valor fijo si es aplicable: <span>$5.00</span> -->
+                        </div>
+                        <!-- <div class="detalle-resumen">
+                            <span>Descuento (CUPON10):</span>
+                            <span id="resumenDescuento">-$15.09</span>
+                        </div> -->
+                        <hr>
+                        <div class="detalle-resumen total-final">
+                            <span>Total:</span>
+                            <span id="resumenTotal">$150.89</span>
+                        </div>
+                        <div class="codigo-descuento">
+                            <label for="cupon">¿Tienes un código de descuento?</label>
+                            <input type="text" id="cupon" name="cupon" placeholder="Introduce tu cupón">
+                            <button class="btn btn-terciary" id="aplicarCuponBtn">Aplicar</button>
+                        </div>
+                        <a href="checkout.html" class="btn btn-primary btn-proceder-pago">Proceder al Pago</a>
+                        <p class="info-seguridad-pago">
+                            <img src="../images/icon-lock.svg" alt="Candado"> Pagos seguros y protegidos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- ... Tu footer (con rutas ../) ... -->
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="/js/carrito.js"></script> <!-- JS específico para la lógica del carrito -->
+</body>
+</html>

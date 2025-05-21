@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - LumiLuck</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <!-- Copia y pega el mismo header que tienes en index.html -->
+        <!-- Asegúrate de que las rutas a imágenes y otras páginas sean correctas desde pages/ -->
+        <div class="container header-container">
+            <a href="../index.html" class="logo"> 
+                <img src="../images/logo-decohogar.png" alt="Logo LumiLuck">
+            </a>
+            <nav class="nav-principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li> 
+                    <li><a href="productos.html">Catálogo General</a></li>
+                    <li><a href="productos.html?categoria=sala">Sala</a></li>
+                    <li><a href="productos.html?categoria=dormitorio">Dormitorio</a></li>
+                    <li><a href="inspiracion.html">Inspiración</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" aria-label="Buscar"><img src="../images/icon-search.svg" alt="Buscar"></a> 
+                <a href="#" aria-label="Mi Cuenta"><img src="../images/icon-user.svg" alt="Mi Cuenta"></a> 
+                <a href="carrito.html" aria-label="Carrito de Compras">
+                    <img src="../images/icon-cart.svg" alt="Carrito"> 
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalogo-productos">
+            <div class="container">
+                <h1>Nuestro Catálogo</h1>
+                <!-- Opcional: Filtros y Ordenación -->
+                <div class="filtros-ordenacion">
+                    <select name="ordenar" id="ordenar">
+                        <option value="popularidad">Ordenar por Popularidad</option>
+                        <option value="precio-asc">Precio: Menor a Mayor</option>
+                        <option value="precio-desc">Precio: Mayor a Menor</option>
+                        <option value="novedades">Novedades</option>
+                    </select>
+                    <!-- Aquí podrían ir más filtros por color, material, etc. -->
+                </div>
+
+                <div class="products-grid">
+                    <!-- Producto 1 -->
+                    <article class="product-card">
+                        <a href="producto-detalle.html?id=hogar101">
+                            <img src="../images/producto-cojin-terciopelo.jpg" alt="Cojín de Terciopelo Azul"> 
+                            <h3>Cojín Terciopelo Azul Marino</h3>
+                            <p class="brand">Marca DecoDreams</p>
+                            <p class="price">$19.99</p>
+                        </a>
+                        <button class="btn btn-secondary add-to-cart-btn" data-product-id="hogar101">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="product-card">
+                        <a href="producto-detalle.html?id=hogar102">
+                            <img src="../images/producto-lampara-escritorio-minimalista.jpg" alt="Lámpara de Escritorio Minimalista"> 
+                            <h3>Lámpara Escritorio Minimalista</h3>
+                            <p class="brand">Luz Moderna</p>
+                            <p class="price">$45.50</p>
+                        </a>
+                        <button class="btn btn-secondary add-to-cart-btn" data-product-id="hogar102">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="product-card">
+                        <a href="producto-detalle.html?id=hogar103">
+                            <img src="../images/producto-juego-jarrones-ceramica.jpg" alt="Set de Jarrones de Cerámica"> 
+                            <h3>Set 3 Jarrones Cerámica</h3>
+                            <p class="brand">Arte en Casa</p>
+                            <p class="price">$32.00</p>
+                        </a>
+                        <button class="btn btn-secondary add-to-cart-btn" data-product-id="hogar103">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Producto 4: Ejemplo de producto en oferta -->
+                    <article class="product-card sale">
+                        <div class="sale-badge">OFERTA</div>
+                        <a href="producto-detalle.html?id=hogar104">
+                            <img src="../images/producto-manta-tejida.jpg" alt="Manta Tejida Gris"> 
+                            <h3>Manta Tejida Acogedora Gris</h3>
+                            <p class="brand">ConfortHogar</p>
+                            <p class="price"><span class="original-price">$30.00</span> $22.50</p>
+                        </a>
+                        <button class="btn btn-secondary add-to-cart-btn" data-product-id="hogar104">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Producto 5 -->
+                    <article class="product-card">
+                        <a href="producto-detalle.html?id=hogar105">
+                            <img src="../images/producto-espejo-sol.jpg" alt="Espejo Decorativo Sol"> 
+                            <h3>Espejo Decorativo Sol Dorado</h3>
+                            <p class="brand">Reflejos Chic</p>
+                            <p class="price">$55.00</p>
+                        </a>
+                        <button class="btn btn-secondary add-to-cart-btn" data-product-id="hogar105">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Añade más productos aquí -->
+
+                </div>
+
+                <!-- Opcional: Paginación -->
+                <div class="paginacion">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">Siguiente »</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Copia y pega el mismo footer que tienes en index.html -->
+        <!-- Asegúrate de que las rutas sean correctas desde pages/ -->
+        <div class="container">
+            <!-- ... contenido del footer ... (ajusta rutas si es necesario) -->
+            <div class="copyright">
+                <p>© <span id="year"></span> LumiLuck. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script> 
+</body>
+</html>

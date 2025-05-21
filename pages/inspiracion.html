@@ -1,0 +1,86 @@
+<!-- pages/inspiracion.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiración para tu Hogar - LumiLuck</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- ... Tu header (con rutas ../) ... -->
+    </header>
+
+    <main>
+        <section class="hero-inspiracion" style="background-image: url('../images/banner-inspiracion.jpg');">
+            <div class="container">
+                <h1>Inspírate y Transforma</h1>
+                <p>Ideas, tendencias y consejos para crear el hogar de tus sueños.</p>
+            </div>
+        </section>
+
+        <section class="contenido-inspiracion">
+            <div class="container">
+                <h2>Nuestros Últimos Artículos e Ideas</h2>
+
+                <!-- Opcional: Filtros por categoría de inspiración -->
+                <div class="filtros-inspiracion">
+                    <button class="filtro-btn active" data-filter="todos">Todos</button>
+                    <button class="filtro-btn" data-filter="tendencias">Tendencias</button>
+                    <button class="filtro-btn" data-filter="consejos">Consejos</button>
+                    <button class="filtro-btn" data-filter="ambientes">Ambientes</button>
+                </div>
+
+                <div class="grid-inspiracion">
+                    <!-- Ejemplo de Tarjeta de Artículo/Idea -->
+                    <article class="tarjeta-inspiracion" data-category="tendencias">
+                        <a href="articulo-detalle-inspiracion.html?id=tendencias-color-2024">
+                            <img src="../images/inspiracion-colores-2024.jpg" alt="Tendencias de color para 2024">
+                            <div class="tarjeta-inspiracion-contenido">
+                                <span class="categoria-etiqueta">Tendencias</span>
+                                <h3>5 Tendencias de Color que Dominarán el 2024</h3>
+                                <p>Descubre los tonos que estarán en todas partes y cómo incorporarlos en tu decoración...</p>
+                                <span class="leer-mas">Leer más →</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-inspiracion" data-category="consejos">
+                        <a href="articulo-detalle-inspiracion.html?id=iluminar-hogar">
+                            <img src="../images/inspiracion-iluminacion.jpg" alt="Consejos de iluminación">
+                            <div class="tarjeta-inspiracion-contenido">
+                                <span class="categoria-etiqueta">Consejos</span>
+                                <h3>Ilumina tu Hogar como un Experto: Guía Práctica</h3>
+                                <p>Desde la luz ambiental hasta la de acento, aprende los secretos para una iluminación perfecta...</p>
+                                <span class="leer-mas">Leer más →</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-inspiracion" data-category="ambientes">
+                        <a href="look-sala-moderna.html"> <!-- Podría ser una página "Shop the Look" -->
+                            <img src="../images/inspiracion-sala-moderna.jpg" alt="Look Sala Moderna">
+                            <div class="tarjeta-inspiracion-contenido">
+                                <span class="categoria-etiqueta">Ambientes</span>
+                                <h3>Shop the Look: Sala de Estar Moderna y Acogedora</h3>
+                                <p>Consigue este estilo contemporáneo con nuestra selección de muebles y accesorios...</p>
+                                <span class="leer-mas">Ver Productos →</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Añade más tarjetas de inspiración -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- ... Tu footer (con rutas ../) ... -->
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <!-- Si tienes filtros JS: <script src="../js/inspiracion-filtros.js"></script> -->
+</body>
+</html>
