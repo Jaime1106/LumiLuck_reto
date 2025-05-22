@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cojín Terciopelo Azul Marino - LumiLuck</title>
+    <link rel="stylesheet" href="../../css/styles.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="../../index.html" class="logo">
+                <img src="/images/logo_lumiluck.png" alt="Logo LumiLuck">
+            </a>
+            <nav class="nav-principal">
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/pages/productos.html">Catálogo</a></li>
+                    <li><a href="/pages/productos.html">Sala</a></li>
+                    <li><a href="/pages/productos.html">Dormitorio</a></li>
+                    <li><a href="/pages/productos.html">Cocina</a></li>
+                    <li><a href="/pages/productos.html">Baños</a></li>
+                    <li><a href="/pages/productos.html">Iluminación</a></li>
+                    <li><a href="/pages/inspiracion.html">Inspiración</a></li>
+                    <li><a href="/pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" aria-label="Buscar" title="Buscar"><i class="bi bi-search"></i></a>
+                <a href="/pages/cuenta.html" aria-label="Mi Cuenta" title="Mi Cuenta"><i class="bi bi-person-circle"></i></a> 
+                <a href="/pages/carrito.html" aria-label="Carrito de Compras" title="Carrito de Compras">
+                    <i class="bi bi-cart3"></i> 
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="detalle-producto-section">
+            <div class="container">
+                <div class="producto-layout">
+                    <div class="producto-imagenes">
+                        <img src="/images/cojin_terciopelo1.jpg" alt="Cojín Terciopelo Azul Marino Grande" class="imagen-principal">
+                        <div class="galeria-miniaturas">
+                            <img src="/images/cojin_terciopelo1.jpg" alt="Miniatura Cojín 1" class="miniatura active">
+                            <img src="/images/cojin_terciopelo2.jpg" alt="Miniatura Cojín 2" class="miniatura">
+                            <img src="/images/cojin_terciopelo3.jpg" alt="Miniatura Cojín 3" class="miniatura">
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h1>Cojín Terciopelo Azul Marino</h1>
+                        <p class="brand-detalle">Marca: DecoDreams</p>
+                        <p class="sku">SKU: HOGAR101</p>
+
+                        <div class="calificacion-producto">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> (23 Reseñas)
+                        </div>
+
+                        <p class="precio-detalle">$19.99</p>
+                        <div class="opciones-producto">
+                            <label for="color">Color:</label>
+                            <select name="color" id="color">
+                                <option value="azul-marino" selected>Azul Marino</option>
+                                <option value="gris-perla">Gris Perla</option>
+                                <option value="verde-esmeralda">Verde Esmeralda</option>
+                            </select>
+                        </div>
+                        <div class="cantidad-producto">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="10">
+                        </div>
+
+                        <button class="btn btn-primary btn-lg add-to-cart-detalle-btn" data-product-id="hogar101">Añadir al Carrito</button>
+                        <button class="btn btn-outline btn-wishlist"><i class="bi bi-heart"></i> Añadir a Lista de Deseos</button>
+
+                        <div class="descripcion-producto">
+                            <h3>Descripción</h3>
+                            <p>Este elegante cojín de terciopelo azul marino añadirá un toque de sofisticación y confort a cualquier espacio. Suave al tacto y con un relleno de alta calidad, es perfecto para tu sofá, cama o sillón favorito.</p>
+                            <ul>
+                                <li>Material: Terciopelo 100% Poliéster de alta densidad.</li>
+                                <li>Dimensiones: 45cm x 45cm (18in x 18in).</li>
+                                <li>Relleno: Fibra hueca siliconada hipoalergénica.</li>
+                                <li>Cierre: Cremallera invisible para fácil extracción y lavado.</li>
+                                <li>Cuidados: Funda lavable a máquina en ciclo delicado. No usar lejía. Secar al aire.</li>
+                            </ul>
+                        </div>
+                        <div class="info-adicional">
+                            <p><i class="bi bi-truck"></i> Envío rápido disponible (2-5 días hábiles)</p>
+                            <p><i class="bi bi-arrow-return-left"></i> Devoluciones fáciles en 30 días</p>
+                        </div>
+                    </div>
+                </div>
+    </main>
+    <footer>
+        <!-- ... Tu footer (con rutas ../../ para enlaces principales y ../ para enlaces dentro de pages/) ... -->
+        <div class="container">
+            <div class="footer-columns">
+                <!-- ... -->
+            </div>
+            <div class="copyright">
+                <p>© <span id="year"></span> LumiLuck. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../js/script.js"></script> 
+    <script src="../../js/producto-detalle-galeria.js"></script> 
+</html>

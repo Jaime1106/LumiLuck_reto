@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LumiLuck</title> 
     <link rel="stylesheet" href="./css/styles.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"></head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <body>
 
     <!-- ======================= HEADER ======================= -->
     <header>
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo-decohogar.png" alt="Logo DecoHogar">
-                <!-- O: <h1>DecoHogar</h1> -->
+                <img src="/images/logo_lumiluck.png" alt="Logo LumiLuck">
+                <!-- O: <h1>LumiLuck</h1> -->
             </a>
             <nav>
                 <ul>
@@ -25,14 +25,16 @@
                     <li><a href="pages/productos.html?categoria=cocina">Cocina</a></li>
                     <li><a href="productos.html?categoria=banos">Baños</a></li>
                     <li><a href="pages/productos.html?categoria=iluminacion">Iluminación</a></li>
-                    <li><a href="pages/inspiracion.html">Inspiración</a></li>
+                    <li><a href="./pages/inspiracion.html">Inspiración</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+
                 </ul>
             </nav>
             <div class="header-icons">
-                <a href="#" aria-label="Buscar"><img src="images/icon-search.svg" alt="Buscar"></a>
-                <a href="#" aria-label="Mi Cuenta"><img src="images/icon-user.svg" alt="Mi Cuenta"></a>
-                <a href="pages/carrito.html" aria-label="Carrito de Compras">
-                    <img src="images/icon-cart.svg" alt="Carrito">
+                <a href="#" aria-label="Buscar" title="Buscar"><i class="bi bi-search"></i></a>
+                <a href="/pages/cuenta.html" aria-label="Mi Cuenta" title="Mi Cuenta"><i class="bi bi-person-circle"></i></a> 
+                <a href="/pages/carrito.html" aria-label="Carrito de Compras" title="Carrito de Compras">
+                    <i class="bi bi-cart3"></i> 
                     <span class="cart-count">0</span>
                 </a>
             </div>
@@ -42,16 +44,59 @@
     <!-- ======================= MAIN CONTENT ======================= -->
     <main>
         <!-- Sección Hero / Banner Principal -->
-        <section class="hero-section">
-            <div class="container">
-                <img src="images/banner-hogar-moderno.jpg" alt="Decoración moderna para tu hogar" style="width:100%;">  
-                <div class="hero-content">
-                    <h2>Transforma Tu Espacio, Vive Mejor</h2> 
-                    <p>Encuentra la inspiración y los artículos perfectos para cada rincón de tu hogar.</p>
-                    <a href="pages/productos.html" class="btn btn-primary">Descubrir Colección</a>
-                </div>
+        <!-- En <main> de tu index.html -->
+<section class="hero-section-carousel">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1: Enlace a Tendencias de Color -->
+            <div class="carousel-item active">
+                <a href="./pages/detalles_inspiracion/articulo-tendencias-color.html">
+                    <img src="./images/im1_carousel.jpeg" class="d-block w-100 carousel-img-custom" alt="Tendencias de color para el hogar">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Descubre las Tendencias de Color 2024</h5>
+                        <p>Transforma tus espacios con los tonos que marcarán la pauta este año.</p>
+                    </div>
+                </a>
             </div>
-        </section>
+
+            <!-- Slide 2: Enlace a Consejos de Iluminación -->
+            <div class="carousel-item">
+                <a href="./pages/detalles_inspiracion/articulo-iluminacion-experto.html"> 
+                    <img src="./images/iluminacion_carousel.jpg" class="d-block w-100 carousel-img-custom" alt="Consejos de iluminación experta">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Ilumina tu Hogar como un Experto</h5>
+                        <p>Consejos prácticos para una atmósfera perfecta en cada habitación.</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Slide 3: Enlace a un Look Específico o Artículo de Ambientes -->
+            <div class="carousel-item">
+                <a href="./pages/detalles_inspiracion/articulo-look-sala-moderna.html"> 
+                    <img src="./images/sala_moderna_carouse.jpg" class="d-block w-100 carousel-img-custom" alt="Look de sala moderna y acogedora">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Shop the Look: Sala Moderna y Acogedora</h5>
+                        <p>Inspírate y encuentra las piezas clave para recrear este ambiente.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
 
         <!-- Sección Categorías Destacadas (Estilo Hogar) -->
         <section class="featured-categories">
@@ -60,25 +105,25 @@
                 <div class="categories-grid">
                     <div class="category-item">
                         <a href="pages/productos.html?categoria=sala">
-                            <img src="images/categoria-sala-estar.jpg" alt="Decoración para Sala de Estar">
+                            <img src="/images/saladeestar.jpg" alt="Decoración para Sala de Estar">
                             <h3>Sala de Estar</h3>
                         </a>
                     </div>
                     <div class="category-item">
                         <a href="pages/productos.html?categoria=dormitorio">
-                            <img src="images/categoria-dormitorio.jpg" alt="Textiles y Accesorios para Dormitorio">
+                            <img src="/images/dormitorio.jpg" alt="Textiles y Accesorios para Dormitorio">
                             <h3>Dormitorio</h3>
                         </a>
                     </div>
                     <div class="category-item">
                         <a href="pages/productos.html?categoria=cocina-comedor">
-                            <img src="images/categoria-cocina.jpg" alt="Utensilios y Decoración para Cocina">
+                            <img src="/images/cocina_comedor.jpg" alt="Utensilios y Decoración para Cocina">
                             <h3>Cocina y Comedor</h3>
                         </a>
                     </div>
                     <div class="category-item">
                         <a href="pages/productos.html?categoria=iluminacion">
-                            <img src="images/categoria-iluminacion.jpg" alt="Lámparas y Soluciones de Iluminación">
+                            <img src="/images/iluminacion.jpg" alt="Lámparas y Soluciones de Iluminación">
                             <h3>Iluminación</h3>
                         </a>
                     </div>
@@ -92,24 +137,24 @@
                 <h2>Novedades para tu Hogar</h2> 
                 <div class="products-grid">
                     <article class="product-card">
-                        <a href="pages/producto-detalle.html?id=hogar101">
-                            <img src="images/producto-cojin-terciopelo.jpg" alt="Cojín de Terciopelo Azul">
+                        <a href="/pages/detalles_productos/producto1_detalle.html">
+                            <img src="/images/cojin_terciopelo1.jpg" alt="Cojín de Terciopelo Azul">
                             <h3>Cojín Terciopelo Azul Marino</h3>
                             <p class="price">$19.99</p>
                         </a>
                         <button class="btn btn-secondary">Añadir al Carrito</button>
                     </article>
                     <article class="product-card">
-                        <a href="pages/producto-detalle.html?id=hogar102">
-                            <img src="images/producto-lampara-escritorio-minimalista.jpg" alt="Lámpara de Escritorio Minimalista">
+                        <a href="/pages/detalles_productos/producto2_detalle.html">
+                            <img src="/images/lampara1.avif" alt="Lámpara de Escritorio Minimalista">
                             <h3>Lámpara Escritorio Minimalista</h3>
                             <p class="price">$45.50</p>
                         </a>
                         <button class="btn btn-secondary">Añadir al Carrito</button>
                     </article>
                     <article class="product-card">
-                        <a href="pages/producto-detalle.html?id=hogar103">
-                            <img src="images/producto-juego-jarrones-ceramica.jpg" alt="Set de Jarrones de Cerámica">
+                        <a href="pages/detalles_productos/producto3_detalle.html">
+                            <img src="/images/jarrones_inicial.jpg" alt="Set de Jarrones de Cerámica">
                             <h3>Set 3 Jarrones Cerámica</h3>
                             <p class="price">$32.00</p>
                         </a>
@@ -136,7 +181,7 @@
         <div class="container">
             <div class="footer-columns">
                 <div class="footer-column">
-                    <h4>DecoHogar</h4>
+                    <h4>LumiLuck</h4>
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="pages/productos.html">Catálogo</a></li>
@@ -148,26 +193,24 @@
                 </div>
                 <div class="footer-column">
                     <h4>Atención al Cliente</h4>
-                    <p>Email: ayuda@decohogar.com</p> 
+                    <p>Email: ayuda@LumiLuck.com</p> 
                     <p>Teléfono: +123 987 6543</p>
                     <p><a href="#">Preguntas Frecuentes</a></p>
                 </div>
-                <div class="footer-column">
-                    <h4>Síguenos</h4>
-                    <div class="social-icons">
-                        <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"></a>
-                        <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
-                        <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>  
-                    </div>
-                </div>
+<div class="compartir-articulo">
+    <strong>siguenos</strong>
+    <a href="#" class="share-facebook" aria-label="Compartir en Facebook" title="Compartir en Facebook"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="share-pinterest" aria-label="Compartir en Pinterest" title="Compartir en Pinterest"><i class="bi bi-pinterest"></i></a>
+    <a href="#" class="share-twitter" aria-label="Compartir en Twitter" title="Compartir en Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="share-whatsapp" aria-label="Compartir en WhatsApp" title="Compartir en WhatsApp"><i class="bi bi-whatsapp"></i></a>
+</div>
             </div>
             <div class="copyright">
-                <p>© <span id="year"></span> DecoHogar. Todos los derechos reservados.</p> 
+                <p>© <span id="year"></span> LumiLuck. Todos los derechos reservados.</p> 
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
-</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script></body>
 </html>

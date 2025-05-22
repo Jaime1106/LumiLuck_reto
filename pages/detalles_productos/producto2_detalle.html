@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lámpara Escritorio Minimalista - LumiLuck</title>
+    <link rel="stylesheet" href="../../css/styles.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="../../index.html" class="logo">
+                <img src="/images/logo_lumiluck.png" alt="Logo LumiLuck">
+            </a>
+            <nav class="nav-principal">
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/pages/productos.html">Catálogo</a></li>
+                    <li><a href="/pages/productos.html">Sala</a></li>
+                    <li><a href="/pages/productos.html">Dormitorio</a></li>
+                    <li><a href="/pages/productos.html">Cocina</a></li>
+                    <li><a href="/pages/productos.html">Baños</a></li>
+                    <li><a href="/pages/productos.html">Iluminación</a></li>
+                    <li><a href="/pages/inspiracion.html">Inspiración</a></li>
+                    <li><a href="/pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" aria-label="Buscar" title="Buscar"><i class="bi bi-search"></i></a>
+                <a href="/pages/cuenta.html" aria-label="Mi Cuenta" title="Mi Cuenta"><i class="bi bi-person-circle"></i></a> 
+                <a href="/pages/carrito.html" aria-label="Carrito de Compras" title="Carrito de Compras">
+                    <i class="bi bi-cart3"></i> 
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="detalle-producto-section">
+            <div class="container">
+                <div class="producto-layout">
+                    <div class="producto-imagenes">
+                        <img src="/images/lampara1.avif" alt="Lámpara Escritorio Minimalista Grande" class="imagen-principal">
+                        <div class="galeria-miniaturas">
+                            <img src="/images/lampara1.avif" alt="Miniatura Lámpara 1" class="miniatura active">
+                            <img src="/images/lampara2.jpg" alt="Miniatura Lámpara 2" class="miniatura">
+                            <img src="/images/lampara3.png" alt="Miniatura Lámpara 3" class="miniatura">
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h1>Lámpara Escritorio Minimalista</h1>
+                        <p class="brand-detalle">Marca: Luz Moderna</p>
+                        <p class="sku">SKU: HOGAR102</p>
+
+                        <div class="calificacion-producto">
+                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> (18 Reseñas)
+                        </div>
+
+                        <p class="precio-detalle">$45.50</p>
+                        <div class="opciones-producto">
+                            <label for="color-lampara">Color Cuerpo:</label>
+                            <select name="color-lampara" id="color-lampara">
+                                <option value="negro" selected>Negro Mate</option>
+                                <option value="blanco">Blanco Nieve</option>
+                                <option value="gris-metal">Gris Metálico</option>
+                            </select>
+                        </div>
+                        <div class="cantidad-producto">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="5">
+                        </div>
+
+                        <button class="btn btn-primary btn-lg add-to-cart-detalle-btn" data-product-id="hogar102">Añadir al Carrito</button>
+                        <button class="btn btn-outline btn-wishlist"><i class="bi bi-heart"></i> Añadir a Lista de Deseos</button>
+
+                        <div class="descripcion-producto">
+                            <h3>Descripción</h3>
+                            <p>Ilumina tu espacio de trabajo o lectura con esta lámpara de escritorio de diseño minimalista y elegante. Su brazo ajustable y cabezal orientable te permiten dirigir la luz exactamente donde la necesitas, mientras que su base estable asegura firmeza.</p>
+                            <ul>
+                                <li>Material: Cuerpo de metal con acabado mate y detalles en madera.</li>
+                                <li>Dimensiones: Altura máx. 55cm, Base 15cm diámetro.</li>
+                                <li>Tipo de Bombilla: E27 (no incluida), máx. 40W o LED equivalente.</li>
+                                <li>Interruptor: En el cable.</li>
+                                <li>Voltaje: 220-240V.</li>
+                            </ul>
+                        </div>
+                         <div class="info-adicional">
+                            <p><i class="bi bi-truck"></i> Envío estándar gratuito</p>
+                            <p><i class="bi bi-shield-check"></i> Garantía de 1 año</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <!-- ... -->
+            </div>
+            <div class="copyright">
+                <p>© <span id="year"></span> LumiLuck. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../js/script.js"></script> 
+    <script src="../../js/producto-detalle-galeria.js"></script> 
+</body>
+</html>
